@@ -1,12 +1,13 @@
 import {Component} from 'angular2/core';
+import {PersonComponent} from './person/person.component';
+import {PersonService} from './person/person.service';
 
 @Component({
     selector: "app-main",
-    template: `
-        <div>
-            <h3>Application main place holder</h3>
-        </div>
-    `
+    templateUrl: "app/app.component.html",
+    directives: [PersonComponent],
+    providers: [PersonService]
+
 })
 
 export class AppComponent{
